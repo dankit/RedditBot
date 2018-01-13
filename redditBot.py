@@ -53,7 +53,6 @@ def main():
     comment_list = repliedTo()
     visionAPIauth()
     print("Currently {} Items in comment list".format(len(comment_list)))
-    detect_text_uri('https://i.imgur.com/zSwlVS5.png')
     search(reddit,comment_list) #can add a while true statement to continously run the program!
 
 def addCommentToFile(commentID):
