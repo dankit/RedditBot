@@ -29,7 +29,7 @@ def search(reddit,comment_list):
                               print('text = {} \nreplying to comment!'.format(imageText))
                               comment.reply("Image transcription:\n\n{} \n\n I'm a bot!".format(imageText))
                               addCommentToFile(comment.id)
-                      
+ 
 
        
             
@@ -72,7 +72,7 @@ def repliedTo():  #for when program is closed annd reopened, makes sure it doesn
     return(replied_comments)
 
 def visionAPIauth(): #authenticate via json file credentials on local machine, then calls the text detector   
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="INSERT YOUR OWN INFORMATION HERE(JSON FILE CREDS PATH, DOWNLOADED FROM GOOGLE CLOUD PLATFORM -> SERVICE ACCOUNT)" #double backslash to prevent unicode errorm
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="INSERT YOUR OWN INFORMATION HERE(JSON FILE CREDS PATH, DOWNLOADED FROM GOOGLE CLOUD PLATFORM -> SERVICE ACCOUNT)" #double backslash to prevent unicode error message
     
 def detect_text_uri(uri): #mostly taken from https://cloud.google.com/vision/docs/detecting-text#vision-text-detection-python
     """Detects text in the file located in Google Cloud Storage or on the Web.
@@ -86,4 +86,4 @@ def detect_text_uri(uri): #mostly taken from https://cloud.google.com/vision/doc
 
 if __name__ == '__main__': #so that it runs the program as a whole, if people want to import functions
          main()             #then it does not run the whole program, and they can run individual functions
-                             #at bottom so it can read all the code above
+                             #put at bottom so it can read all the code above
